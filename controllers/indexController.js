@@ -1,7 +1,7 @@
-
+const { messages } = require("../utils/messages");
 
 const getIndex = (req, res) => {
-    res.render("index", { message: "Hello World!" });
+    res.render("index", { messages: messages });
 };
 
 

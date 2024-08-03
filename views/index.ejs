@@ -7,6 +7,16 @@
     <title>Mini Message Board</title>
 </head>
 <body>
-    <h1><%= message %></h1>
+
+    <h1>Messages:</h1>
+
+    <% messages.forEach(message => { %>
+        <div class="messageWrapper">
+            <h2><%= message.user %></h2>
+            <h3><%= message.added.toISOString().slice(0, 10) %></h3>
+            <p><%= message.text %></p>
+        </div>
+    <% }); %>
+
 </body>
 </html>
