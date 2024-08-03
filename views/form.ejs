@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Create new message</title>
 </head>
 <body>
-    <h1>Form goes here</h1>
+    <h1>Create new message</h1>
+    <div class="formWrapper">
+        <form action="/new" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+            <label for="message">Message</label>
+            <input type="text" id="message">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
