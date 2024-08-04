@@ -14,7 +14,7 @@
         <button>Add new message</button>
     </a>
 
-    <% messages.forEach((message, index) => { %>
+    <% messages.reverse().forEach((message, index) => { %>
         <div class="messageWrapper">
             <h2><%= message.user %></h2>
             <h3><%= message.added.toISOString().slice(0, 10) %></h3>
