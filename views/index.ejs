@@ -14,11 +14,18 @@
         <button>Add new message</button>
     </a>
 
-    <% messages.reverse().forEach((message, index) => { %>
+    <% messages.slice().reverse().forEach((message, index) => { %>
+
+        <% 
+            let messageText = message.text;
+            if (message.text.length > 300)
+                messageText = message.text.slice(0,300) + "...";
+        %>
+
         <div class="messageWrapper">
             <h2><%= message.user %></h2>
             <h3><%= message.added.toISOString().slice(0, 10) %></h3>
-            <p><%= message.text %></p>
+            <p><%= messageText %></p>
             <a href=<%="/"+index%>>
                 <button>View Message</button>
             </a>
