@@ -14,11 +14,14 @@
         <button>Add new message</button>
     </a>
 
-    <% messages.forEach(message => { %>
+    <% messages.forEach((message, index) => { %>
         <div class="messageWrapper">
             <h2><%= message.user %></h2>
             <h3><%= message.added.toISOString().slice(0, 10) %></h3>
             <p><%= message.text %></p>
+            <a href=<%="/"+index%>>
+                <button>View Message</button>
+            </a>
         </div>
     <% }); %>
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Create new message</title>
+</head>
+<body>
+
+    <div class="messageWrapper">
+        <h2><%= message.user %></h2>
+        <h3><%= message.added.toISOString().slice(0, 10) %></h3>
+        <p><%= message.text %></p>
+    </div>
+
+    <a href="/">
+        <button>Go Back</button>
+    </a>
+
+</body>
+</html>
