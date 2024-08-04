@@ -26,7 +26,7 @@
             <h2><%= message.user %></h2>
             <h3><%= message.added.toISOString().slice(0, 10) %></h3>
             <p><%= messageText %></p>
-            <a href=<%="/"+index%>>
+            <a href=<%= "/" + (messages.length - index - 1) %>>
                 <button>View Message</button>
             </a>
         </div>
